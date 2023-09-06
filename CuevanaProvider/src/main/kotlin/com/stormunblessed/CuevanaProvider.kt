@@ -197,7 +197,7 @@ class CuevanaProvider : MainAPI() {
             val iframe = fixUrl(it.attr("data-src"))
             if (iframe.contains(Regex("cuevana.*fembed"))) {
                 val femkey = iframe.substringAfter("?h=")
-                val femrequest = app.post("https://api.cuevana3.me/fembed/api.php", allowRedirects = false,
+                val femrequest = app.post("https://api.cuevana3.eu/fembed/api.php", allowRedirects = false,
                     headers = mapOf(
                         "User-Agent" to USER_AGENT,
                         "Accept" to "application/json, text/javascript, */*; q=0.01",
